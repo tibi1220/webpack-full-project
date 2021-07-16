@@ -1,3 +1,5 @@
+import "./styles/index.scss";
+
 const elvenShieldRevipe = {
   leatherStrips: 2,
   ironIgnot: 1,
