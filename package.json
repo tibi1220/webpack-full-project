@@ -1,0 +1,28 @@
+{
+  "name": "webpack-full-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tibi1220/webpack-full-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tibi1220/webpack-full-project/issues"
+  },
+  "homepage": "https://github.com/tibi1220/webpack-full-project#readme",
+  "devDependencies": {
+    "webpack": "^5.45.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
