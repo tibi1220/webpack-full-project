@@ -1,11 +1,14 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const path = require('path');
 
 module.exports = {
   mode: 'development',
   target: 'web',
+
+  entry: './src/index.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -56,6 +59,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new ReactRefreshWebpackPlugin(),
   ],
 
   resolve: {
@@ -65,6 +69,6 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     contentBase: './dist',
-    // hot: true,
+    hot: true,
   },
 };
