@@ -1,8 +1,8 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: "development",
-  target: "web",
+  mode: 'development',
+  target: 'web',
 
   module: {
     rules: [
@@ -10,16 +10,16 @@ module.exports = {
         test: /\.s?css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
         ],
       },
       {
-        test: /\.js$/i,
+        test: /\.jsx?$/i,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
     ],
@@ -27,9 +27,13 @@ module.exports = {
 
   plugins: [new MiniCssExtractPlugin()],
 
-  devtool: "source-map",
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+
+  devtool: 'source-map',
   devServer: {
-    contentBase: "./dist",
-    hot: true,
+    contentBase: './dist',
+    // hot: true,
   },
 };
